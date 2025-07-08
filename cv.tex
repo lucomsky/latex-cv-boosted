@@ -28,38 +28,31 @@
 \input{.head}
 % This \input{.head} can be replaced by \documentclass[]{friggeri-cv} in your personal document.
 
-\addbibresource{bibliography.bib} % Specify the bibliography file to include publications
+% \addbibresource{bibliography.bib} % Specify the bibliography file to include publications
 
 \begin{document}
 
-\header{john}{smith}{junior business analyst} % Your name and current job title/field
+\input{sections/title.tex}
 
 %----------------------------------------------------------------------------------------
 %	SIDEBAR SECTION
 %----------------------------------------------------------------------------------------
 
 \begin{aside} % In the aside, each new line forces a line break
-\section{contact}
-123 Broadway \faMapMarker
-City, State 12345
-Country
-~
-+0 (000) 111 1111 \faPhone
-+0 (000) 111 1112 \faPhone
-~
-\href{mailto:john@smith.com}{john@smith.com \faEnvelope}
-\href{http://www.smith.com}{http://www.smith.com~\faBookmark}
-\href{http://facebook.com/johnsmith}{fb://jsmith \faFacebook}
-\section{languages}
-\begin{tabular}{r r}
-english&\score{5}
-spanish&\score{4}
-italian&\score{2}\end{tabular}
-\section{programming}
-JavaScript
-Python, C++, PHP
-CSS3 \& HTML5
+	\section{contact}
+	\input{sections/contacts.tex}
+	\section{languages}
+	\begin{tabular}{r r}
+		english & \score{4}
+		russian & \score{5}
+	\end{tabular}
+	\section{programming}
+	\input{sections/programming-skills.tex}
 \end{aside}
+
+\input{sections/summary.tex}
+
+\input{sections/certification.tex}
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
@@ -77,7 +70,7 @@ CSS3 \& HTML5
 %	AWARDS SECTION
 %----------------------------------------------------------------------------------------
 
-\input{sections/awards.tex}
+% \input{sections/awards.tex}
 
 %----------------------------------------------------------------------------------------
 %	COMMUNICATION SKILLS SECTION
@@ -90,7 +83,7 @@ CSS3 \& HTML5
 %	VOLUNTARY ACTIVITIES SECTION
 %----------------------------------------------------------------------------------------
 
-\input{sections/volunteer.tex}
+% \input{sections/volunteer.tex}
 
 %----------------------------------------------------------------------------------------
 %	INTERESTS SECTION
@@ -102,13 +95,13 @@ CSS3 \& HTML5
 %	PUBLICATIONS SECTION
 %----------------------------------------------------------------------------------------
 
-\input{sections/publications.tex}
+% \input{sections/publications.tex}
 
 %----------------------------------------------------------------------------------------
 %	REFERENCES SECTION
 %----------------------------------------------------------------------------------------
 
-\input{sections/references.tex}
+% \input{sections/references.tex}
 
 
 

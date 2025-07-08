@@ -2,26 +2,26 @@
 \NeedsTeXFormat{LaTeX2e}
 
 \DeclareOption{heros}{
-  \def\@cv@fontface{texgyreheros}
+	\def\@cv@fontface{texgyreheros}
 }
 \DeclareOption{alegreya}{
-    \def\@cv@fontface{AlegreyaSans}
+	\def\@cv@fontface{AlegreyaSans}
 }
 \DeclareOption{merriweather}{
-    \def\@cv@fontface{MerriweatherSans}
+	\def\@cv@fontface{MerriweatherSans}
 }
 \DeclareOption{nunito}{
-    \def\@cv@fontface{Nunito}
+	\def\@cv@fontface{Nunito}
 }
 \DeclareOption{roboto}{
-    \def\@cv@fontface{Roboto}
+	\def\@cv@fontface{Roboto}
 }
 
 \DeclareOption{nocolors}{\def\@cv@nocolors{}}
 \DeclareOption{print}{\def\@cv@print{}}
 
 \DeclareOption*{%
-  \PassOptionsToClass{\CurrentOption,10pt}{article}%
+	\PassOptionsToClass{\CurrentOption,10pt}{article}%
 }
 \ExecuteOptions{heros}
 
@@ -52,20 +52,20 @@
 \definecolor{friggeribrown}{HTML}{A52A2A}
 
 \ifdefined\@cv@print
-  \colorlet{friggerigreen}{gray}
-  \colorlet{friggeriorange}{gray}
-  \colorlet{friggeripurple}{gray}
-  \colorlet{friggeribrown}{gray}
-  \colorlet{friggerired}{gray}
-  \colorlet{friggeriblue}{gray}
-  \colorlet{friggeriyellowgreen}{gray}
-  \colorlet{friggeribrickred}{gray}
-  \colorlet{friggerisepia}{gray}
-  \colorlet{fillheader}{white}
-  \colorlet{header}{gray}
+	\colorlet{friggerigreen}{gray}
+	\colorlet{friggeriorange}{gray}
+	\colorlet{friggeripurple}{gray}
+	\colorlet{friggeribrown}{gray}
+	\colorlet{friggerired}{gray}
+	\colorlet{friggeriblue}{gray}
+	\colorlet{friggeriyellowgreen}{gray}
+	\colorlet{friggeribrickred}{gray}
+	\colorlet{friggerisepia}{gray}
+	\colorlet{fillheader}{white}
+	\colorlet{header}{gray}
 \else
-  \colorlet{fillheader}{gray}
-  \colorlet{header}{white}
+	\colorlet{fillheader}{gray}
+	\colorlet{header}{white}
 \fi
 \colorlet{textcolor}{gray}
 \colorlet{headercolor}{gray}
@@ -73,15 +73,15 @@
 \def\colorPallete{{"friggeriblue","friggerired","friggeriorange","friggerigreen","friggeripurple","friggeribrown","friggeriyellowgreen","friggeribrickred"}}
 
 \ifdefined\@cv@nocolors
-  \colorlet{friggerigreen}{gray}
-  \colorlet{friggeriorange}{gray}
-  \colorlet{friggeripurple}{gray}
-  \colorlet{friggeribrown}{gray}
-  \colorlet{friggerired}{gray}
-  \colorlet{friggeriblue}{gray}
-  \colorlet{friggeriyellowgreen}{gray}
-  \colorlet{friggeribrickred}{gray}
-  \colorlet{friggerisepia}{gray}
+	\colorlet{friggerigreen}{gray}
+	\colorlet{friggeriorange}{gray}
+	\colorlet{friggeripurple}{gray}
+	\colorlet{friggeribrown}{gray}
+	\colorlet{friggerired}{gray}
+	\colorlet{friggeriblue}{gray}
+	\colorlet{friggeriyellowgreen}{gray}
+	\colorlet{friggeribrickred}{gray}
+	\colorlet{friggerisepia}{gray}
 \fi
 
 %%%%%%%%%
@@ -109,9 +109,9 @@
 
 \newfontfamily\bodyfont
 [Path=fonts/\@cv@fontface/,
-BoldFont=\@cv@fontface-Bold.ttf,
-ItalicFont=\@cv@fontface-Italic.ttf,
-BoldItalicFont=\@cv@fontface-BoldItalic.ttf]
+	BoldFont=\@cv@fontface-Bold.ttf,
+	ItalicFont=\@cv@fontface-Italic.ttf,
+	BoldItalicFont=\@cv@fontface-BoldItalic.ttf]
 {\@cv@fontface-Regular.ttf}
 \newfontfamily\thinfont[Path=fonts/\@cv@fontface/]{\@cv@fontface-Light.ttf}
 \newfontfamily\headingfont[Path=fonts/\@cv@fontface/]{\@cv@fontface-Bold.ttf}
@@ -119,10 +119,10 @@ BoldItalicFont=\@cv@fontface-BoldItalic.ttf]
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont
 [Mapping=tex-text, Color=textcolor,
-Path=fonts/\@cv@fontface/,
-BoldFont=\@cv@fontface-Bold.ttf,
-ItalicFont=\@cv@fontface-Italic.ttf,
-BoldItalicFont=\@cv@fontface-BoldItalic.ttf
+	Path=fonts/\@cv@fontface/,
+	BoldFont=\@cv@fontface-Bold.ttf,
+	ItalicFont=\@cv@fontface-Italic.ttf,
+	BoldItalicFont=\@cv@fontface-BoldItalic.ttf
 ]
 {\@cv@fontface-Regular.ttf}
 
@@ -136,25 +136,25 @@ BoldItalicFont=\@cv@fontface-BoldItalic.ttf
 \RequirePackage{tikz}
 
 \newcommand{\rolefont}{%
-  \fontsize{14pt}{24pt}\selectfont%
-  \thinfont%
-  \color{white}%
+	\fontsize{14pt}{24pt}\selectfont%
+	\thinfont%
+	\color{white}%
 }
 
 \newcommand{\header}[3]{%
-  \begin{tikzpicture}[remember picture,overlay]
-    \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=4cm] (box) at (current page.north){};
-    \node [anchor=center] (name) at (box) {%
-      \fontsize{40pt}{72pt}\color{header}%
-      {\thinfont #1}{\bodyfont  #2}
-    };
-    \node [anchor=north] at (name.south) {%
-      \fontsize{14pt}{24pt}\color{header}%
-      \thinfont #3%
-    };
-  \end{tikzpicture}
-  \vspace{2.5cm}
-  \vspace{-2\parskip}
+	\begin{tikzpicture}[remember picture,overlay]
+		\node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=4cm] (box) at (current page.north){};
+		\node [anchor=center] (name) at (box) {%
+			\fontsize{40pt}{72pt}\color{header}%
+			{\thinfont #1}{\bodyfont  #2}
+		};
+		\node [anchor=north] at (name.south) {%
+			\fontsize{14pt}{24pt}\color{header}%
+			\thinfont #3%
+		};
+	\end{tikzpicture}
+	\vspace{2.5cm}
+	\vspace{-2\parskip}
 }
 
 
@@ -165,39 +165,39 @@ BoldItalicFont=\@cv@fontface-BoldItalic.ttf
 
 \newcounter{colorCounter}
 \def\@sectioncolor#1#2#3{%
-  {%
-    \color{%
-      \ifcase\value{colorCounter}%
-        friggeriblue\or%
-        friggerired\or%
-        friggeriorange\or%
-        friggerigreen\or%
-        friggeripurple\or%
-        friggeribrown\or%
-        friggeriyellowgreen\or%
-        friggeribrickred\or%
-        friggerisepia\else%
-        headercolor\fi%
-    } #1#2#3%
-  }%
-  \stepcounter{colorCounter}%
+	{%
+			\color{%
+				\ifcase\value{colorCounter}%
+					friggeriblue\or%
+					friggerired\or%
+					friggeriorange\or%
+					friggerigreen\or%
+					friggeripurple\or%
+					friggeribrown\or%
+					friggeriyellowgreen\or%
+					friggeribrickred\or%
+					friggerisepia\else%
+					headercolor\fi%
+			} #1#2#3%
+		}%
+	\stepcounter{colorCounter}%
 }
 
 \renewcommand{\section}[1]{
-  \par\vspace{\parskip}
-  {%
-    \LARGE\headingfont\color{headercolor}%
-    \@sectioncolor #1%
-  }
-  \par\vspace{\parskip}
+	\par\vspace{\parskip}
+	{%
+		\LARGE\headingfont\color{headercolor}%
+		\@sectioncolor #1%
+	}
+	\par\vspace{\parskip}
 }
 
 \renewcommand{\subsection}[1]{
-  \par\vspace{.5\parskip}%
-  {%
-  \large\headingfont\color{headercolor} #1%
-  }
-  \par\vspace{.25\parskip}%
+	\par\vspace{.5\parskip}%
+	{%
+		\large\headingfont\color{headercolor} #1%
+	}
+	\par\vspace{.25\parskip}%
 }
 
 \pagestyle{empty}
@@ -208,27 +208,32 @@ BoldItalicFont=\@cv@fontface-BoldItalic.ttf
 %%%%%%%%%%%%%%%%%%%%
 \setlength{\tabcolsep}{0pt}
 \newenvironment{entrylist}{%
-  \begin{longtable}{@{\extracolsep{\fill}}ll}
-}{%
-  \end{longtable}
+	\begin{longtable}{@{\extracolsep{\fill}}ll}
+		}{%
+	\end{longtable}
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \newcommand{\entry}[4]{%
-  #1&\parbox[t]{11.8cm}{%
-    \textbf{#2}%
-    \hfill%
-    {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
-    #4\vspace{\parsep}%
-  }\\}
+	#1&\parbox[t]{11.8cm}{%
+		\textbf{#2}%
+		\hfill%
+		{\footnotesize\addfontfeature{Color=lightgray} #3}\\%
+		#4\vspace{\parsep}%
+	}\\}
 \newcommand{\courseentry}[6]{%
-  #1&\parbox[t]{11.8cm}{%
-    \textbf{#2}%
-    \hfill%
-    {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
-    #4\vspace{\parsep}}\\%
-  \multicolumn{1}{r}{\footnotesize Thesis}&\parbox[t]{11.8cm}{#5}\\%
-  \multicolumn{1}{r}{\footnotesize Coursework}&\parbox[t]{11.8cm}{{\footnotesize #6}%
-  \vspace{\parsep}}\\}
+	#1&\parbox[t]{11.8cm}{%
+		\textbf{#2}%
+		\hfill%
+		{\footnotesize\addfontfeature{Color=lightgray} #3}\\%
+		#4\vspace{\parsep}}\\%
+	\multicolumn{1}{r}{\footnotesize Thesis}&\parbox[t]{11.8cm}{#5}\\%
+	\multicolumn{1}{r}{\footnotesize Coursework}&\parbox[t]{11.8cm}{{\footnotesize #6}%
+		\vspace{\parsep}}\\}
+\newcommand{\certentry}[2]{%
+	#1&\parbox[t]{11.8cm}{%
+		\textbf{#2}%
+		\vspace{\parsep}%
+	}\\}
 
 %%%%%%%%%%%%%%
 % Side block %
@@ -238,18 +243,18 @@ BoldItalicFont=\@cv@fontface-BoldItalic.ttf
 \setlength{\TPHorizModule}{1cm}
 \setlength{\TPVertModule}{1cm}
 \newenvironment{aside}{%
-  \let\oldsection\section
-  \renewcommand{\section}[1]{
-    \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
-  }
-  \begin{textblock}{3.6}(1.5, 4.33)
-  \begin{flushright}
-  \obeycr
-}{%
-  \restorecr
-  \end{flushright}
-  \end{textblock}
-  \let\section\oldsection
+	\let\oldsection\section
+	\renewcommand{\section}[1]{
+		\par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
+	}
+	\begin{textblock}{3.6}(1.5, 4.33)
+		\begin{flushright}
+			\obeycr
+			}{%
+			\restorecr
+		\end{flushright}
+	\end{textblock}
+	\let\section\oldsection
 }
 
 %%%%%%%%%%%%%%%%
@@ -259,209 +264,209 @@ BoldItalicFont=\@cv@fontface-BoldItalic.ttf
 \RequirePackage[backend=biber, style=verbose, maxnames=99, sorting=ydnt, defernumbers=true]{biblatex}
 
 \DeclareFieldFormat[article,%
-                    thesis,%
-                    book,%
-                    inproceedings,%
-                    misc,%
-                    software,%
-                    report]{title}{\small#1\par}
+	thesis,%
+	book,%
+	inproceedings,%
+	misc,%
+	software,%
+	report]{title}{\small#1\par}
 
 \DeclareBibliographyDriver{thesis}{%
-  \printfield{title}%
-  \par%
-  \newblock%
-  {%
-    \footnotesize\addfontfeature{Color=lightgray}\itshape%
-    \printfield{type}%
-    \setunit*{\addcomma\space}%
-    \usebibmacro{institution+location+date}%
-    \setunit*{\addcomma\space}%
-    \printfield{note}%
-  }
-  \newblock%
-  {%
-    \footnotesize\addfontfeature{Color=lightgray}\itshape%
-    \printfield{doi}%
-    \newunit%
-  }
-  \par\vspace{0.3\baselineskip}
+	\printfield{title}%
+	\par%
+	\newblock%
+	{%
+		\footnotesize\addfontfeature{Color=lightgray}\itshape%
+		\printfield{type}%
+		\setunit*{\addcomma\space}%
+		\usebibmacro{institution+location+date}%
+		\setunit*{\addcomma\space}%
+		\printfield{note}%
+	}
+	\newblock%
+	{%
+		\footnotesize\addfontfeature{Color=lightgray}\itshape%
+		\printfield{doi}%
+		\newunit%
+	}
+	\par\vspace{0.3\baselineskip}
 }
 
 \DeclareBibliographyDriver{article}{%
-  \printfield{title}%
-  \newblock%
-  \printnames{author}%
-  \par%
-  \newblock%
-  {%
-    \footnotesize\addfontfeature{Color=lightgray}\itshape%
-    \usebibmacro{journal+issuetitle}%
-    \setunit{\space}%
-    \printfield{pages}%
-    \newunit%
-    \printlist{publisher}%
-    \setunit*{\addcomma\space}%
-    \printfield{year}%
-    \setunit*{\addcomma\space}%
-    \printfield{note}%
-  }
-  \newblock%
-  {%
-    \footnotesize\addfontfeature{Color=lightgray}\itshape%
-    \printfield{doi}%
-    \newunit%
-  }
-  \par\vspace{0.3\baselineskip}
+	\printfield{title}%
+	\newblock%
+	\printnames{author}%
+	\par%
+	\newblock%
+	{%
+		\footnotesize\addfontfeature{Color=lightgray}\itshape%
+		\usebibmacro{journal+issuetitle}%
+		\setunit{\space}%
+		\printfield{pages}%
+		\newunit%
+		\printlist{publisher}%
+		\setunit*{\addcomma\space}%
+		\printfield{year}%
+		\setunit*{\addcomma\space}%
+		\printfield{note}%
+	}
+	\newblock%
+	{%
+		\footnotesize\addfontfeature{Color=lightgray}\itshape%
+		\printfield{doi}%
+		\newunit%
+	}
+	\par\vspace{0.3\baselineskip}
 }
 
 \DeclareBibliographyDriver{book}{%
-  \printfield{title}%
-  \newblock%
-  \printnames{author}%
-  \par%
-  \newblock%
-  {%
-    \footnotesize\addfontfeature{Color=lightgray}\itshape%
-    \printlist{publisher}%
-    \setunit*{\addcomma\space}%
-    \printfield{note}%
-    \setunit*{\addcomma\space}%
-    \printfield{year}%
-    \setunit{\addcomma\space}%
-    \printlist{location}%
-    \newunit%
-  }
-  \par\vspace{0.3\baselineskip}
+	\printfield{title}%
+	\newblock%
+	\printnames{author}%
+	\par%
+	\newblock%
+	{%
+		\footnotesize\addfontfeature{Color=lightgray}\itshape%
+		\printlist{publisher}%
+		\setunit*{\addcomma\space}%
+		\printfield{note}%
+		\setunit*{\addcomma\space}%
+		\printfield{year}%
+		\setunit{\addcomma\space}%
+		\printlist{location}%
+		\newunit%
+	}
+	\par\vspace{0.3\baselineskip}
 }
 
 
 \DeclareBibliographyDriver{inproceedings}{%
-  \printfield{title}%
-  \newblock%
-  \printnames{author}%
-  \par%
-  \newblock%
-  {%
-    \footnotesize\addfontfeature{Color=lightgray}%
-    \printfield{booktitle}%
-    \setunit{\addcomma\space}%
-    \printfield{year}%
-    \setunit{\addcomma\space}%
-    \printlist{location}%
-    \setunit*{\addcomma\space}%
-    \printfield{note}%
-    \newunit%
-  }
-  \newblock%
-  {%
-    \footnotesize\addfontfeature{Color=lightgray}\itshape%
-    \printfield{doi}%
-    \newunit%
-  }
-  \par\vspace{0.3\baselineskip}
+	\printfield{title}%
+	\newblock%
+	\printnames{author}%
+	\par%
+	\newblock%
+	{%
+		\footnotesize\addfontfeature{Color=lightgray}%
+		\printfield{booktitle}%
+		\setunit{\addcomma\space}%
+		\printfield{year}%
+		\setunit{\addcomma\space}%
+		\printlist{location}%
+		\setunit*{\addcomma\space}%
+		\printfield{note}%
+		\newunit%
+	}
+	\newblock%
+	{%
+		\footnotesize\addfontfeature{Color=lightgray}\itshape%
+		\printfield{doi}%
+		\newunit%
+	}
+	\par\vspace{0.3\baselineskip}
 }
 
 \DeclareBibliographyDriver{misc}{%
-  \printfield{title}%
-  \newblock%
-  \printnames{author}%
-  \par%
-  \newblock%
-  {%
-    \footnotesize\addfontfeature{Color=lightgray}\itshape%
-    \printfield{eprint}%
-    \setunit*{\addcomma\space}%
-    \printfield{year}%
-    \setunit*{\addcomma\space}%
-    \printfield{note}%
-    \newunit%
-  }
-  \par\vspace{0.3\baselineskip}
+	\printfield{title}%
+	\newblock%
+	\printnames{author}%
+	\par%
+	\newblock%
+	{%
+		\footnotesize\addfontfeature{Color=lightgray}\itshape%
+		\printfield{eprint}%
+		\setunit*{\addcomma\space}%
+		\printfield{year}%
+		\setunit*{\addcomma\space}%
+		\printfield{note}%
+		\newunit%
+	}
+	\par\vspace{0.3\baselineskip}
 }
 
 \DeclareBibliographyDriver{report}{%
-  \printfield{title}%
-  \newblock%
-  \printnames{author}%
-  \par%
-  \newblock%
-  {%
-    \footnotesize\addfontfeature{Color=lightgray}\itshape%
-    \printfield{type}%
-    \setunit{\space}%
-    \printfield{number}%
-    \setunit{\addcomma\space}%
-    \printfield{year}%
-    \setunit*{\addcomma\space}%
-    \printfield{note}%
-    \newunit%
-  }
-  \par\vspace{0.3\baselineskip}
+	\printfield{title}%
+	\newblock%
+	\printnames{author}%
+	\par%
+	\newblock%
+	{%
+		\footnotesize\addfontfeature{Color=lightgray}\itshape%
+		\printfield{type}%
+		\setunit{\space}%
+		\printfield{number}%
+		\setunit{\addcomma\space}%
+		\printfield{year}%
+		\setunit*{\addcomma\space}%
+		\printfield{note}%
+		\newunit%
+	}
+	\par\vspace{0.3\baselineskip}
 }
 
 \DeclareBibliographyDriver{software}{%
-  \printfield{title}%
-  \newblock%
-  \printnames{author}%
-  \par%
-  \newblock%
-  {%
-    \footnotesize\addfontfeature{Color=lightgray}\itshape%
-    \printfield{url}%
-    \setunit{\addcomma\space}%
-    \printfield{year}%
-    \setunit*{\addcomma\space}%
-    \printfield{note}%
-    \newunit%
-  }
-  \par\vspace{0.3\baselineskip}
+	\printfield{title}%
+	\newblock%
+	\printnames{author}%
+	\par%
+	\newblock%
+	{%
+		\footnotesize\addfontfeature{Color=lightgray}\itshape%
+		\printfield{url}%
+		\setunit{\addcomma\space}%
+		\printfield{year}%
+		\setunit*{\addcomma\space}%
+		\printfield{note}%
+		\newunit%
+	}
+	\par\vspace{0.3\baselineskip}
 }
 
 \DeclareNameFormat{author}{%
-  \small\addfontfeature{Color=lightgray}%
-  \ifgiveninits
-    {\usebibmacro{name:given-family}
-      {\namepartfamily}
-      {\namepartgiveni}
-      {\namepartprefix}
-      {\namepartsuffix}}
-    {\usebibmacro{name:given-family}
-      {\namepartfamily}
-      {\namepartgiven}
-      {\namepartprefix}
-      {\namepartsuffix}}%
-  \usebibmacro{name:andothers}}
+	\small\addfontfeature{Color=lightgray}%
+	\ifgiveninits
+	{\usebibmacro{name:given-family}
+		{\namepartfamily}
+		{\namepartgiveni}
+		{\namepartprefix}
+		{\namepartsuffix}}
+	{\usebibmacro{name:given-family}
+		{\namepartfamily}
+		{\namepartgiven}
+		{\namepartprefix}
+		{\namepartsuffix}}%
+	\usebibmacro{name:andothers}}
 
 \setlength{\bibitemsep}{0.5ex}
 
- \defbibheading{bibheading}[\bibname]{%
-   \vspace{0.3\baselineskip}%
-   \large\headingfont\color{headercolor}#1%
-   \markboth{#1}{#1}
- }
+\defbibheading{bibheading}[\bibname]{%
+	\vspace{0.3\baselineskip}%
+	\large\headingfont\color{headercolor}#1%
+	\markboth{#1}{#1}
+}
 
- \newcommand{\printbibsection}[3][]{
-  \begin{refsection}
-     \nocite{*}
-     \ifblank{#1}{%
-         \printbibliography[sorting=chronological, type={#2}, title={#3}, heading=bibheading]%
-     }{%
-     \ifblank{#2}{%
-         \printbibliography[sorting=chronological, #1, title={#3}, heading=bibheading]%
-         }{%
-         \printbibliography[sorting=chronological, #1, type={#2}, title={#3}, heading=bibheading]%
-         }
-     }
-  \end{refsection}
- }
-  
+\newcommand{\printbibsection}[3][]{
+	\begin{refsection}
+		\nocite{*}
+		\ifblank{#1}{%
+			\printbibliography[sorting=chronological, type={#2}, title={#3}, heading=bibheading]%
+		}{%
+			\ifblank{#2}{%
+				\printbibliography[sorting=chronological, #1, title={#3}, heading=bibheading]%
+			}{%
+				\printbibliography[sorting=chronological, #1, type={#2}, title={#3}, heading=bibheading]%
+			}
+		}
+	\end{refsection}
+}
 
-  
-  
- \DeclareSortingScheme{chronological}{
-   \sort[direction=descending]{\field{year}}
-   \sort[direction=descending]{\field{month}}
- }
+
+
+
+\DeclareSortingScheme{chronological}{
+	\sort[direction=descending]{\field{year}}
+	\sort[direction=descending]{\field{month}}
+}
 
 
 
@@ -473,20 +478,20 @@ BoldItalicFont=\@cv@fontface-BoldItalic.ttf
 \setlength{\listdoubleitemmaincolumnwidth}{5.5cm}%
 
 \newcommand{\cvref}[7]{%
-    {\bf#1}\newline% Name
-    {\addfontfeature{Color=lightgray}\itshape%
-    \ifthenelse{\equal{#2}{}}{}{#2\newline}% Department
-    \ifthenelse{\equal{#3}{}}{}{#3\newline}% Adresse
-    \ifthenelse{\equal{#4}{}}{}{#4\newline}% PLZ
-    \ifthenelse{\equal{#5}{}}{}{#5\newline}}% Land
-  	\ifthenelse{\equal{#6}{}}{}{\href{mailto:#6}{#6}\newline} %email
+	{\bf#1}\newline% Name
+	{\addfontfeature{Color=lightgray}\itshape%
+		\ifthenelse{\equal{#2}{}}{}{#2\newline}% Department
+		\ifthenelse{\equal{#3}{}}{}{#3\newline}% Adresse
+		\ifthenelse{\equal{#4}{}}{}{#4\newline}% PLZ
+		\ifthenelse{\equal{#5}{}}{}{#5\newline}}% Land
+	\ifthenelse{\equal{#6}{}}{}{\href{mailto:#6}{#6}\newline} %email
 	\ifthenelse{\equal{#7}{}}{}{#7}\\\vspace{.3\baselineskip}%Phone
 }
 
 \newcommand{\refrow}[2]{%
-    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}{#1}\end{minipage}%
-    \hspace{2cm}%
-    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}{#2}\end{minipage}\\%
+	\begin{minipage}[t]{\listdoubleitemmaincolumnwidth}{#1}\end{minipage}%
+	\hspace{2cm}%
+	\begin{minipage}[t]{\listdoubleitemmaincolumnwidth}{#2}\end{minipage}\\%
 }
 
 %%%%%%%%%%%%%%
@@ -497,13 +502,13 @@ BoldItalicFont=\@cv@fontface-BoldItalic.ttf
 \newcommand\score[1]{
 \pgfmathsetmacro\pgfxa{#1+1}
 \tikzstyle{scorestars}=[circle, draw,inner sep=2.25pt,anchor=south]
-  \begin{tikzpicture}[baseline]
-    \foreach \i in {1,...,5} {
-    \pgfmathparse{(\i<=#1?\colorPallete[5-#1]:"white")}
-    \edef\starcolor{\pgfmathresult}
-    \draw (\i*1.75ex,0) node[name=star\i,scorestars,fill=\starcolor]  {};
-   }
-  \end{tikzpicture}
+\begin{tikzpicture}[baseline]
+	\foreach \i in {1,...,5} {
+			\pgfmathparse{(\i<=#1?\colorPallete[5-#1]:"white")}
+			\edef\starcolor{\pgfmathresult}
+			\draw (\i*1.75ex,0) node[name=star\i,scorestars,fill=\starcolor]  {};
+		}
+\end{tikzpicture}
 }
 
 %%%%%%%%%%%%%%%%
