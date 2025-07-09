@@ -229,9 +229,11 @@
 	\multicolumn{1}{r}{\footnotesize Thesis}&\parbox[t]{11.8cm}{#5}\\%
 	\multicolumn{1}{r}{\footnotesize Coursework}&\parbox[t]{11.8cm}{{\footnotesize #6}%
 		\vspace{\parsep}}\\}
-\newcommand{\certentry}[2]{%
+\newcommand{\certentry}[3]{%
 	#1&\parbox[t]{11.8cm}{%
 		\textbf{#2}%
+		\hfill%
+		{\footnotesize\addfontfeature{Color=lightgray} #3}\\%
 		\vspace{\parsep}%
 	}\\}
 
