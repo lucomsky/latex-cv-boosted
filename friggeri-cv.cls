@@ -209,13 +209,14 @@
 %%%%%%%%%%%%%%%%%%%%
 \setlength{\tabcolsep}{0pt}
 \newenvironment{entrylist}{%
-	\begin{longtable}{@{\extracolsep{\fill}}ll}
-		}{%
-	\end{longtable}
+	% \begin{longtable}{@{\extracolsep{\fill}}ll}
+	% 	}{%
+	% \end{longtable}
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \newcommand{\entry}[4]{%
-	#1\quad&\parbox[t]{10.8cm}{%
+	% #1\quad&\parbox[t]{10.8cm}{%
+	#1\quad\parbox[t]{10.8cm}{%
 		\textbf{#2}%
 		\hfill%
 		{\footnotesize\addfontfeature{Color=lightgray} #3}\\%
@@ -231,7 +232,8 @@
 	\multicolumn{1}{r}{\footnotesize Coursework}&\parbox[t]{11.8cm}{{\footnotesize #6}%
 		\vspace{\parsep}}\\}
 \newcommand{\certentry}[3]{%
-	#1&\parbox[t]{11.8cm}{%
+	% #1&\parbox[t]{11.8cm}{%
+	#1~\parbox[t]{11.8cm}{%
 		\textbf{#2}%
 		\hfill%
 		{\footnotesize\addfontfeature{Color=lightgray} #3}\\%
@@ -518,5 +520,5 @@
 % Other tweaks %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
+\RequirePackage[left=2cm,top=2cm,right=2cm,bottom=2cm,nohead,nofoot]{geometry}
 \RequirePackage[hidelinks]{hyperref}
