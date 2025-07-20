@@ -216,7 +216,7 @@
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \newcommand{\entry}[4]{%
 	% #1\quad&\parbox[t]{10.8cm}{%
-	#1\quad\parbox[t]{10.8cm}{%
+	\parbox[t]{1.5cm}{#1}\quad\parbox[t]{10.8cm}{%
 		\textbf{#2}%
 		\hfill%
 		{\footnotesize\addfontfeature{Color=lightgray} #3}\\%
